@@ -1,0 +1,23 @@
+mkdir company
+sudo adduser admin
+su - admin
+sudo addgroup staff123
+sudo adduser staf1
+sudo adduser staf2
+sudo adduser staf3
+sudo usermod -aG staff123 staf1
+sudo usermod -aG staff123 staf2
+sudo usermod -aG staff123 staf3
+su - ubuntu
+sudo usermod -aG sudo admin
+su - admin
+sudo mkdir /backup
+sudo chown :sudo /backup
+sudo chmod 770 /backup
+cd /backup
+touch system_log.txt
+ls
+df -h >> system_log.txt
+cat system_log.txt
+free -m >> system_log.txt
+cat system_log.txt
